@@ -1,0 +1,30 @@
+flowchart TD
+    A[Start] 
+    B[Skriv inn navnet ditt]
+    C[Les inn navn fra bruker]
+    D[Hent nåværende time (DateTime.Now.Hour)]
+    E{Er timen < 6?}
+    F[Bruk "God natt"]
+    G{Er timen < 12?}
+    H[Bruk "God morgen"]
+    I{Er timen < 18?}
+    J[Bruk "God ettermiddag"]
+    K[Bruk "God kveld"]
+    L[Skriv ut hilsen med navn]
+    M[Slutt]
+
+    A --> B
+    B --> C
+    C --> D
+    D --> E
+    E -- Ja --> F
+    E -- Nei --> G
+    G -- Ja --> H
+    G -- Nei --> I
+    I -- Ja --> J
+    I -- Nei --> K
+    F --> L
+    H --> L
+    J --> L
+    K --> L
+    L --> M

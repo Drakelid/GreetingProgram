@@ -1,0 +1,18 @@
+START
+    SKRIV "Skriv inn navnet ditt: "
+    LES inn navn fra bruker
+    currentHour = DateTime.Now.Hour
+
+    // Bestem hilsen basert på time
+    IF currentHour < 6 THEN
+         greeting = "God natt"
+    ELSE IF currentHour < 12 THEN
+         greeting = "God morgen"
+    ELSE IF currentHour < 18 THEN
+         greeting = "God ettermiddag"
+    ELSE
+         greeting = "God kveld"
+    END IF
+
+    SKRIV ut greeting + ", " + navn + "!"
+SLUTT
